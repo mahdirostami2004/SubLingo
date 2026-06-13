@@ -57,7 +57,7 @@ class TranslatorApp(QWidget):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("Vocabulary Translator PRO")
+        self.setWindowTitle("SubLingo")
         self.resize(950, 650)
 
         self.words = []
