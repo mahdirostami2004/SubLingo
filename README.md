@@ -1,4 +1,4 @@
-# 📘 Vocabulary Translator PRO
+# 📘 SubLingo
 
 A modern desktop application built with **Python + PyQt6** that helps you learn languages by translating word lists from subtitle files or text files.
 
