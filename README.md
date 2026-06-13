@@ -1,159 +1,142 @@
-# 📘 Language Learning CSV Translator (Python)
+# 📘 Vocabulary Translator PRO
 
-A simple and powerful Python tool designed to help you learn new languages while watching movies or reading content.
-
-This program takes a list of words (stored in a CSV or TXT file) and translates them into a target language, displaying each word alongside its meaning.
+A modern desktop application built with **Python + PyQt6** that helps you learn languages by translating word lists from subtitle files or text files.
 
 ---
 
 ## 🚀 Features
 
-* 📂 Read words from `.csv` or `.txt` files
-* 🌍 Translate words into any target language
-* 📖 Display original word + translated meaning
-* 💾 Save translated results into a new file
-* 🎬 Perfect for learning vocabulary from subtitles
-* ⚡ Fast and easy to use
+- 📂 Load words from `.txt` / `.csv` files  
+- 🌍 Translate words into multiple languages  
+- 🇮🇷 Language selector with flags  
+- 📊 Clean table view (Word | Translation)  
+- 🔍 Search inside translated results  
+- 💾 Export results to CSV  
+- ⚡ Fast background translation (QThread – no UI freeze)  
+- 🎨 Modern dark UI design  
+- 📄 Shows selected file name inside button  
 
 ---
 
-## 💡 Use Case
-
-While watching movies with subtitles, you can:
-
-1. Extract unfamiliar words
-2. Save them into a file like this:
-
-```id="a1b2c3"
-hello,world,freedom,justice
-```
-
-3. Feed the file into this program
-4. Get output like:
-
-```id="d4e5f6"
-hello -> سلام
-world -> جهان
-freedom -> آزادی
-justice -> عدالت
-```
 
 ---
 
-## 📥 Input Format
+## ⚙️ Installation
 
-You can provide input in two formats:
+### 1. Clone repository
 
-### 1. CSV File
-
-```id="csv1"
-hello,world,freedom
+```bash
+git clone https://github.com/your-username/vocabulary-translator-pro.git
+cd vocabulary-translator-pro
 ```
 
-### 2. TXT File
+### 2. Install dependencies
 
-```id="txt1"
-hello,world,freedom
+```bash
+pip install PyQt6 requests
+```
+
+### 3. Run application
+
+```bash
+python main.py
 ```
 
 ---
 
-## 📤 Output Format
+## 📂 File Format Example
 
-The program generates:
+Input file should be comma-separated words:
 
-```id="out1"
-word -> translation
 ```
-
-Optionally saved into a file like:
-
-```id="out2"
-output.txt
+apple, book, car, computer, water
 ```
 
 ---
 
-## 🛠️ How It Works
+## 🌍 Supported Languages
 
-1. Read file input
-2. Parse words using comma delimiter
-3. Send each word to translation API
-4. Print results
-5. Save results to file
+* 🇮🇷 Persian (fa)
+* 🇺🇸 English (en)
+* 🇩🇪 German (de)
+* 🇫🇷 French (fr)
+* 🇪🇸 Spanish (es)
+* 🇮🇹 Italian (it)
+* 🇷🇺 Russian (ru)
+* 🇹🇷 Turkish (tr)
+* 🇸🇦 Arabic (ar)
+* 🇨🇳 Chinese (zh)
+* 🇯🇵 Japanese (ja)
 
 ---
 
-## 🔧 Dependencies
+## 🧠 How It Works
 
-Make sure you have Python installed.
+* Words are loaded from a file
+* Each word is sent to a translation API (LibreTranslate)
+* Translation runs in a background thread (QThread)
+* Results are displayed in a table in real time
 
-Install required libraries:
+---
 
-```bash id="install1"
-pip install requests
+## ⚡ Tech Stack
+
+* Python 3
+* PyQt6 (GUI)
+* Requests (API calls)
+* LibreTranslate API
+
+---
+
+## 📤 Export Feature
+
+You can export translated results to a CSV file:
+
+```
+Word,Translation
+apple,سیب
+book,کتاب
+car,ماشین
 ```
 
-Optional (for better translation support):
+---
 
-```bash id="install2"
-pip install googletrans==4.0.0-rc1
-```
+## 🎯 Project Goal
+
+This project was built for personal use to help learn vocabulary while watching subtitles and reading content.
 
 ---
 
-## ▶️ How to Run
+## 📌 Notes
 
-```bash id="run1"
-python main.py input.txt fa
-```
-
-Example:
-
-```bash id="run2"
-python main.py words.txt fa
-```
+* Requires internet connection for translation
+* Uses free LibreTranslate API (may have rate limits)
+* UI is optimized for desktop usage
 
 ---
 
-## 📌 Arguments
+## 🚀 Future Improvements
 
-| Argument   | Description                        |
-| ---------- | ---------------------------------- |
-| input file | CSV or TXT file                    |
-| language   | Target language (e.g., `fa`, `en`) |
-
----
-
-## 🧠 Future Improvements
-
-* 🧾 Sentence translation support
-* 🔊 Pronunciation (Text-to-Speech)
-* 🧠 Spaced repetition system (SRS)
-* 🖥️ GUI (Tkinter / PyQt)
-* 📊 Word frequency tracking
-
----
-
-## 🤝 Contributing
-
-Feel free to fork the project and improve it!
-Pull requests are welcome.
-
----
-
-## 📄 License
-
-MIT License
-
----
-
-## ❤️ Motivation
-
-This project was created to make language learning easier and more practical by integrating it with daily activities like watching movies.
+* 📱 Drag & drop subtitle files (.srt support)
+* 🧠 Spaced repetition (Anki-style learning system)
+* 💾 Offline translation model
+* ⭐ Favorite words system
+* 🌙 Light/Dark theme toggle
+* 📊 Progress tracking (learned words)
 
 ---
 
 ## 👨‍💻 Author
 
-Mehdi Rostami
+Built for personal learning and vocabulary improvement.
+
+---
+## 🤝 Contributing
+
+Feel free to contribute!  
+Open an issue, submit a pull request, or suggest new features. All contributions are welcome.
+
+## 📄 License
+
+MIT License – free to use and modify.
+```
