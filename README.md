@@ -136,7 +136,4 @@ Built for personal learning and vocabulary improvement.
 Feel free to contribute!  
 Open an issue, submit a pull request, or suggest new features. All contributions are welcome.
 
-## 📄 License
 
-MIT License – free to use and modify.
-```
